@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Demandes reçues</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Liste des demandes de congé</h2>
+  <ul id="requestList"></ul>
+
+  <script>
+    const requests = JSON.parse(localStorage.getItem("leaveRequests")) || [];
+    const list = document.getElementById("requestList");
+    requests.forEach((req, index) => {
+      const item = document.createElement("li");
+      item.textContent = `${req.name} a demandé un congé ${req.type} du ${req.from} au ${req.to}. Raison: ${req.reason}`;
+      list.appendChild(item);
+    });
+  </script>
+</body>
+</html>
