@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Demande de congé</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Formulaire de demande de congé</h2>
+  <form id="leaveForm">
+    <label>Nom: <input type="text" id="name" required></label><br><br>
+    <label>Type de congé:
+      <select id="type">
+        <option value="Annuel">Annuel</option>
+        <option value="Maladie">Maladie</option>
+        <option value="Urgence">Urgence</option>
+      </select>
+    </label><br><br>
+    <label>De: <input type="date" id="from"></label><br><br>
+    <label>À: <input type="date" id="to"></label><br><br>
+    <label>Raison: <textarea id="reason"></textarea></label><br><br>
+    <button type="submit">Soumettre</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
